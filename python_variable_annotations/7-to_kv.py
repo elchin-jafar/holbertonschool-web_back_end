@@ -6,4 +6,5 @@ type IntOrFloat = Union[int, float]
 
 
 def to_kv(k: str, v: IntOrFloat) -> tuple[str, IntOrFloat]:
+    """return tuple"""
     return (k, v)
