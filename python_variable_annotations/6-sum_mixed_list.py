@@ -1,8 +1,8 @@
-#!/usr/bin/python3
+#!/usr/bin/env python3
 """sum mixed list"""
 from typing import List, Union
 
-UnionList = List[Union[int, float]]
+type UnionList = List[Union[int, float]]
 
 
 def sum_mixed_list(mxd_list: UnionList) -> float:
