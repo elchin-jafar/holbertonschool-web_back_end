@@ -3,4 +3,5 @@
 
 
 def add(a: float, b: float) -> float:
+    """return sum of inputs"""
     return a + b
