@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
 """complex types"""
-from typing import Union
+from typing import Union, Tuple
 
 IntOrFloat = Union[int, float]
 
 
-def to_kv(k: str, v: IntOrFloat) -> tuple[str, IntOrFloat]:
+def to_kv(k: str, v: IntOrFloat) -> Tuple[str, float]:
     """return tuple"""
-    return (k, v)
+    return (k, v * v)
