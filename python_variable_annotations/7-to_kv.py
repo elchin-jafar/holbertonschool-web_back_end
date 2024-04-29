@@ -2,7 +2,7 @@
 """complex types"""
 from typing import Union
 
-type IntOrFloat = Union[int, float]
+IntOrFloat = Union[int, float]
 
 
 def to_kv(k: str, v: IntOrFloat) -> tuple[str, IntOrFloat]:
