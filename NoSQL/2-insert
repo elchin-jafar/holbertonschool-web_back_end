@@ -1,4 +1,3 @@
 // insert document to the collection
-use $1
 db.school.insert({"name": "Holberton school"})
 
