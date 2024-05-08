@@ -1,4 +1,4 @@
 // insert document to the collection
-school = {"name": "Holberton school"}
-db.$1.insert(school)
+use $1
+db.school.insert({"name": "Holberton school"})
 
