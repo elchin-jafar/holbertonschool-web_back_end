@@ -4,4 +4,4 @@
 
 def schools_by_topic(mongo_collection, topic):
     """find and return same topic schools"""
-    return mongo_collection.find({"topic": topic})
+    return mongo_collection.find({"topics": topic})
