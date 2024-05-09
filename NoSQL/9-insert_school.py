@@ -4,4 +4,5 @@
 
 def insert_school(mongo_collection, **kwargs):
     """insert given data to collection based on kwargs"""
-    return db.mongo_collection.insert(kwargs).insertedIds['0']
+    result = db.mongo_collection.insert(kwargs)
+    return result.inserted_id
