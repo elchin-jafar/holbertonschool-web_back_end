@@ -5,6 +5,7 @@ from pymongo import MongoClient
 
 
 if __name__ == "__main__":
+    """main"""
     client = MongoClient(host="localhost", port=27017)
 
     db = client.logs
