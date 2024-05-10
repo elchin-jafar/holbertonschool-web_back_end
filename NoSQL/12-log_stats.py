@@ -6,9 +6,9 @@ from pymongo import MongoClient
 
 client = MongoClient(host="localhost", port=27017)
 
-db = client.holberton
+db = client.logs
 
-collection = db.holberton
+collection = db.nginx
 
 count = collection.count_documents({})
 
@@ -18,5 +18,5 @@ print("Methods:")
 methods = ["GET", "POST", "PUT", "PATCH", "DELETE"]
 
 for method in methods:
-    docs = collection.find({"method": method})
-    print("method {}: {}".format(method, len(docs)))
+    count = collection.count_documents({"method": method})
+    print("method {}: {}".format(method, count))
