@@ -4,25 +4,23 @@
 from pymongo import MongoClient
 
 
-if __name__ == "__main__":
-    """main"""
-    client = MongoClient("mongodb://127.0.0.1:27017")
+client = MongoClient(host="localhost", port=27017)
 
-    db = client.logs
+db = client.logs
 
-    collection = db.nginx
+collection = db.nginx
 
-    count = collection.count_documents({})
+count = collection.count_documents({})
 
-    print("{} logs".format(count))
-    print("Methods:")
+print("{} logs".format(count))
+print("Methods:")
 
-    methods = ["GET", "POST", "PUT", "PATCH", "DELETE"]
+methods = ["GET", "POST", "PUT", "PATCH", "DELETE"]
 
-    for method in methods:
-        count = collection.count_documents({"method": method})
-        print("\tmethod {}: {}".format(method, count))
+for method in methods:
+    count = collection.count_documents({"method": method})
+    print("\tmethod {}: {}".format(method, count))
 
-    countGet = collection.count_documents({"method": "GET", "path": "/status"})
+countGet = collection.count_documents({"method": "GET", "path": "/status"})
 
-    print("{} status check".format(countGet))
+print("{} status check".format(countGet))
