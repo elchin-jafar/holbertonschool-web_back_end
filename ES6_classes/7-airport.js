@@ -4,8 +4,12 @@ class Airport {
     this._code = code;
   }
 
-  toString() {
-    return `[object ${this._code}]`;
+  //   toString() {
+  //     return `[object ${this._code}]`;
+  //   }
+
+  get [Symbol.toStringTag]() {
+    return this._code;
   }
 }
 
